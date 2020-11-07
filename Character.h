@@ -42,9 +42,6 @@ public:
 	void status();
 	void equip(string n);
 	bool checkEquip(string n);
-	void changeSpeed(int s);
-	bool checkTied();
-	void changeTied();
 	const Item getEquip(string n);
 	void setItem(string, Item);
 	void updateStatus();
