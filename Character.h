@@ -18,14 +18,14 @@ private:
 	double damageTaken;
 	double critChance;
 	int defense;
-	bool alive;
+	bool life;
 	vector<Item> inventory;
 	vector<Item> equiped_items;
 
 public:
 	Character();
 	Character(string name);
-	Character(string name, double hp, double infection, int level, int xp, int damage, double damageTaken, double critChance, int defense, bool alive);
+	Character(string name, double hp, double infection, int level, int xp, double damageTaken, double critChance, int defense, bool alive);
 	const string getName() const;
 	const double getHP() const;
 	const double getInfection() const;
