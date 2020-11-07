@@ -75,6 +75,8 @@ void Character::incLeveL(int xp) {
 
 void Character::takeDamage(double dmg) {
 	hp -= dmg;
+    if ((rand() % 2) == 0)
+        hp -= infection;
 }
 
 void Character::addHP(double h) {
@@ -83,6 +85,10 @@ void Character::addHP(double h) {
 
 void Character::addDefense(int d) {
 	defense += d;
+}
+
+void Character::setInfection(int i) {
+    infection = i;
 }
 
 void Character::status() {
@@ -128,6 +134,10 @@ const bool Character::getLife() const {
 		return false;
 	}
 	return true;
+}
+
+const int Character::getInfection() const {
+    return infection;
 }
 
 const Item Character::getEquip(string item) {
