@@ -91,8 +91,15 @@ void Character::setInfection(int i) {
     infection = i;
 }
 
+
+const double Character::getHP() const {
+	return hp;
+}
+
+
 void Character::status() {
-	cout << "HP: " << hp << "Left" << endl;
+	int h = getHP();
+	cout << "HP: " << h << "Left" << endl;
 	cout << "Level: " << level << endl;
 }
 void Character::equip(string item) {
@@ -107,10 +114,6 @@ void Character::equip(string item) {
 
 const string Character::getName() const {
 	return name;
-}
-
-const double Character::getHP() const {
-	return hp;
 }
 
 const int Character::getLevel() const {

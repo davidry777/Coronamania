@@ -35,19 +35,19 @@ public:
     const double getCriticalChance() const;
     const int getDefense() const;
     const bool getLife() const;  
-    const int getInfection() const; 
+    const double getInfection() const; 
 	void incLeveL(int exp);
 	void takeDamage(double dmg);
 	void addHP(double h);
 	void addDefense(int d);
 	void addCriticalChance(double c);
-    void setInfection(int inf)
+    void setInfection(int inf);
 	void status();
 	void equip(string n);
 	const Item getEquip(string n);
 	void setItem(string, Item);
 	void updateStatus();
-	Item getItem(string s);
+	const Item getItem(string s);
 	string getItemKey() const;
     
 };

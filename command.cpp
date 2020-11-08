@@ -1,22 +1,22 @@
-#include "Command.h"
+#include "command.h"
 
 Command::Command() {
 	commandWord = "";
 	secondWord = "";
-	commands = { "GO", "QUIT", "HELP", "USE", "INVENTORY", "EQUIP", "ATTACK", "DEFEND" };
+	commands = { "QUIT", "HELP", "USE", "INVENTORY", "EQUIP", "ATTACK", "DEFEND" };
 }
 
 
 Command::Command(string commandWord) {
 	this->commandWord = commandWord;
 	secondWord = "";
-	commands = { "GO", "QUIT", "HELP", "USE", "INVENTORY", "EQUIP", "ATTACK", "DEFEND" };
+	commands = { "QUIT", "HELP", "USE", "INVENTORY", "EQUIP", "ATTACK", "DEFEND" };
 }
 
 Command::Command(string commandWord, string secondWord) {
 	this->commandWord = commandWord;
 	this->secondWord = secondWord;
-	commands = { "GO", "QUIT", "HELP", "USE", "INVENTORY", "EQUIP", "ATTACK", "DEFEND" };
+	commands = { "QUIT", "HELP", "USE", "INVENTORY", "EQUIP", "ATTACK", "DEFEND" };
 }
 
 bool Command::validCommand() {
@@ -45,12 +45,4 @@ const string Command::getCommandWord(){
 		commandWord[i] = toupper(commandWord[i]);
 	}
 	return commandWord;
-}
-
-bool Command::hasSecondWord() {
-	return secondWord != "";
-}
-
-string Command::getSecondWord() {
-	return secondWord;
 }
