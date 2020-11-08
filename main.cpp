@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Command.h"
 #include "Character.h"
+#include "Game.h"
 
 using namespace std;
 using namespace Print;
@@ -191,22 +192,21 @@ void Game::equip(Command command) {
 	}
 	string item = command.getSecondWord();
 	if (p1->checkEquip(item)) {
-		if (item._Equal("sword")) {
+		if (item._Equal("mask")) {
 			p1->equip(item);
 			p1->addStrength(p1->getItem(item).getStrength());
 			//p1->addHR();
-			cout << ("You have equipped the sword. You feel stronger with this in your hand!");
+			cout << ("You have equipped the mask. You feel stronger with this in your face!");
 		}
-		else if (item._Equal("shield")) {
+		else if (item._Equal("sanitizer")) {
 			p1->equip(item);
 			p1->addDefense(p1->getItem(item).getDefense());
-			cout << ("You have equpped the shield. You feel you can take a hit from anything!");
+			cout << ("You have equpped the sanitizer. You feel you can take a hit from anything!");
 		}
-		else if (item._Equal("necklace")) {
+		else if (item._Equal("bleach")) {
 			p1->equip(item);
-			cout << ("You have equipped the necklacke. You feel a new sense of arcane power in you.");
-			p1->addMagic(10);
-			p1->addMana(50);
+			cout << ("You have equipped bleach. You feel a new sense of arcane power in you.");
+            p1->addStrength(p1->getItem(item).getStrength());
 		}
 		else {
 			cout << ("You cannot equip that.");
