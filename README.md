@@ -1,1 +1,1 @@
-# CutieHackProject
+# Coronamania
